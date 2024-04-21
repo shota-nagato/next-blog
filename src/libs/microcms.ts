@@ -11,7 +11,7 @@ export const microCMSClient = createClient({
   apiKey: process.env.MICROCMS_API_KEY,
 })
 
-export async function getArticle(queries?: MicroCMSQueries) {
+export async function getArticles(queries?: MicroCMSQueries) {
   const articles = await microCMSClient.getList<Article>({
     customRequestInit: {
       next: {
@@ -24,7 +24,7 @@ export async function getArticle(queries?: MicroCMSQueries) {
   return articles
 }
 
-export async function getArticlesDetail(
+export async function getArticleDetail(
   contentId: string,
   queries?: MicroCMSQueries,
 ) {
