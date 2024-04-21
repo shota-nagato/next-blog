@@ -11,6 +11,15 @@ type Props = {
 export default function ArticleContent(props: Props) {
   useEffect(() => {
     Prism.highlightAll()
+
+    const codeElements = document.querySelectorAll('[data-filename]')
+    codeElements.forEach((codeElement) => {
+      const filename = codeElement.getAttribute('data-filename')
+      const spanElement = document.createElement('span')
+      spanElement.textContent = filename
+      spanElement.className = 'code-block-filename'
+      codeElement.prepend(spanElement)
+    })
   }, [])
   return parse(props.content)
 }
