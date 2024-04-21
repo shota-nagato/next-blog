@@ -26,7 +26,7 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <div className="flex md:flex-row flex-col w-full gap-8 md:gap-4 md:px-8 max-w-[1200px] mx-auto">
+        <div className="flex md:flex-row flex-col w-full gap-8 md:gap-4 md:px-8 px-2 max-w-[1200px] mx-auto">
           <main className="md:w-2/3 w-full">{children}</main>
           <Sidebar />
         </div>

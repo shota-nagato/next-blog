@@ -36,7 +36,7 @@ export default async function Article(props: Props) {
   }
 
   return (
-    <article className="px-2 bg-white rounded-lg py-4 mx-2 md:mx-0">
+    <article className="px-2 bg-white rounded-lg py-4 container mx-auto">
       <h1 className="text-lg font-bold text-center">{article.title}</h1>
       <div className="flex justify-end gap-2 mt-2 text-[10px] md:text-xs text-gray-400">
         <div className="flex items-center gap-1">

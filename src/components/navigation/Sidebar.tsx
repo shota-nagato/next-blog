@@ -1,6 +1,6 @@
 export const Sidebar = () => {
   return (
-    <aside className="w-full md:w-1/3 container mx-auto px-2">
+    <aside className="w-full md:w-1/3 container mx-auto">
       <div className="px-4 bg-white shadow rounded-lg py-4">
         <h2 className="text-sm font-bold">ここに名前が入ります</h2>
         <p className="text-xs text-gray-400">webエンジニア</p>
