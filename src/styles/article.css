@@ -1,2 +1,74 @@
-.article {
+.article h2 {
+  font-weight: bold;
+  padding: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: #0f83fe;
+  background-color: #e1f5fe;
+  border-left: 4px solid #0f83fd;
+}
+
+.article h3 {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #0f83fd;
+}
+
+.article h4 {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.article blockquote {
+  position: relative;
+  padding: 10px 15px 10px 20px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+  background: #f5f5f5;
+  color: #777777;
+  border-left: 4px solid #0f83fd;
+}
+
+.article table {
+  margin: 2rem auto;
+  text-indent: 0;
+  line-height: 1.5;
+  width: 100%;
+  height: auto;
+}
+
+.article table tbody {
+  border: 1 solid #e5e7db;
+}
+
+.article th {
+  text-align: left;
+  font-weight: bold;
+  background: #eaf4fc;
+  padding-left: 0.75rem;
+  border: 1px solid #cfdce6;
+}
+
+.article td {
+  border: 1px solid #cfdce6;
+  padding-left: 0.75rem;
+}
+
+.article ul {
+  padding-left: 1.5rem;
+}
+
+.article ul > li {
+  list-style: disc;
+  margin: 0.4rem auto;
+}
+
+.article a {
+  color: #0f83fd;
 }

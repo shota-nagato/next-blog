@@ -7,7 +7,7 @@ import { formatDate } from '@/libs/convertdate'
 export default function Home() {
   const { contents } = use(getArticles())
   return (
-    <div className="grid grid-cols-2 gap-6 container mx-auto px-2">
+    <div className="grid grid-cols-2 md:gap-6 gap-2 container mx-auto px-2">
       {contents.map((article) => (
         <article
           className="flex flex-col shadow pb-4 rounded-xl bg-white hover:bg-gray-50"
