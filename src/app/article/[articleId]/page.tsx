@@ -2,8 +2,8 @@ import { getArticles, getArticleDetail } from '@/libs/microcms'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import parse from 'html-react-parser'
 import '@/styles/article.css'
+import ArticleContent from './AricleContent'
 
 type Props = {
   params: { articleId: string }
@@ -45,7 +45,9 @@ export default async function Article(props: Props) {
         height={1200}
         className="rounded-lg object-cover"
       />
-      <div className="article">{parse(article.content)}</div>
+      <div>
+        <ArticleContent content={article.content} />
+      </div>
     </article>
   )
 }

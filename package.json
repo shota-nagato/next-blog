@@ -12,11 +12,13 @@
     "html-react-parser": "^5.1.10",
     "microcms-js-sdk": "^3.1.0",
     "next": "14.2.2",
+    "prismjs": "^1.29.0",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/prismjs": "^1.26.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/parser": "^7.7.0",
