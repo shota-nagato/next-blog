@@ -25,7 +25,7 @@ export default function Home() {
               className="rounded-t-xl object-cover"
             />
             <div className="px-2">
-              <div className="flex gap-2 mt-2 text-[10px] md:text-xs text-gray-400">
+              <div className="flex gap-2 mt-2 text-[12px] md:text-xs text-gray-800">
                 <div className="flex items-center gap-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ export default function Home() {
                   {formatDate(article.updatedAt)}
                 </div>
               </div>
-              <h2 className="text-sm md:text-md font-bold mt-2">
+              <h2 className="text-md md:text-md font-bold mt-2">
                 {article.title}
               </h2>
             </div>
