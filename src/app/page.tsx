@@ -61,7 +61,7 @@ export default function Home() {
                   {formatDate(article.updatedAt)}
                 </div>
               </div>
-              <h2 className="text-sm md:text-md font-bold mt-2">
+              <h2 className="text-md md:text-md font-bold mt-2">
                 {article.title}
               </h2>
             </div>

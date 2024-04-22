@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import '../styles/globals.css'
 import { Sidebar } from '@/components/navigation/Sidebar'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,13 +21,15 @@ export default function RootLayout({
     <html lang="ja">
       <body className={inter.className}>
         <header className="sticky top-0 shadow bg-white py-4 mb-8">
-          <div className="flex w-full md:px-8 mx-auto max-w-[1200px]">
+          <div className="flex w-full md:px-8 mx-auto max-w-[1400px]">
             <div className="mx-2">
-              <Image src="/logo.png" alt="ロゴ" width={32} height={32} />
+              <Link href="/" className="flex flex-col items-start">
+                <Image src="/logo.png" alt="ロゴ" width={32} height={32} />
+              </Link>
             </div>
           </div>
         </header>
-        <div className="flex md:flex-row flex-col w-full gap-8 md:gap-4 md:px-8 px-2 max-w-[1200px] mx-auto">
+        <div className="flex md:flex-row flex-col w-full gap-8 md:gap-4 md:px-8 px-2 max-w-[1400px] mx-auto">
           <main className="md:w-2/3 w-full">{children}</main>
           <Sidebar />
         </div>
