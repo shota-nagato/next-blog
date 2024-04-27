@@ -1,4 +1,4 @@
-import { Article } from '@/types/articleType'
+import { Article, Category } from '@/types/articleType'
 import { MicroCMSQueries, createClient } from 'microcms-js-sdk'
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN)
@@ -39,4 +39,34 @@ export async function getArticleDetail(
     queries,
   })
   return articleDetail
+}
+
+export async function getCategories(queries?: MicroCMSQueries) {
+  const categories = await microCMSClient.getList<Category>({
+    customRequestInit: {
+      next: {
+        revalidate: 0,
+      },
+    },
+    endpoint: 'categories',
+    queries,
+  })
+  return categories
+}
+
+export async function getCategoryDetail(
+  contentId: string,
+  queries?: MicroCMSQueries,
+) {
+  const categoryDetail = await microCMSClient.getListDetail<Category>({
+    customRequestInit: {
+      next: {
+        revalidate: 0,
+      },
+    },
+    endpoint: 'categories',
+    contentId,
+    queries,
+  })
+  return categoryDetail
 }

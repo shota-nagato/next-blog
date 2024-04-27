@@ -81,6 +81,17 @@ export default async function Article(props: Props) {
         height={1200}
         className="rounded-lg object-cover mt-2"
       />
+      <div className="flex flex-wrap gap-2 mt-2">
+        {article.categories.map((category) => (
+          <a
+            href={`/category/${category.id}`}
+            className="text-sm bg-slate-300 rounded-full px-2 py-1"
+            key={`${article.id}-${category.id}`}
+          >
+            {category.name}
+          </a>
+        ))}
+      </div>
       <div className="mt-4 article">
         <ArticleContent content={article.content} />
       </div>
