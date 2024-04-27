@@ -64,6 +64,16 @@ export default function Home() {
               <h2 className="text-md md:text-md font-bold mt-2">
                 {article.title}
               </h2>
+              <div className="flex flex-wrap gap-2 mt-2">
+                {article.categories.map((category) => (
+                  <p
+                    className="text-xs bg-slate-300 rounded-full px-2 py-1"
+                    key={`${article.id}-${category.id}`}
+                  >
+                    {category.name}
+                  </p>
+                ))}
+              </div>
             </div>
           </Link>
         </article>
