@@ -45,7 +45,7 @@ export async function getCategories(queries?: MicroCMSQueries) {
   const categories = await microCMSClient.getList<Category>({
     customRequestInit: {
       next: {
-        revalidate: 0,
+        revalidate: 60,
       },
     },
     endpoint: 'categories',
@@ -61,7 +61,7 @@ export async function getCategoryDetail(
   const categoryDetail = await microCMSClient.getListDetail<Category>({
     customRequestInit: {
       next: {
-        revalidate: 0,
+        revalidate: 60,
       },
     },
     endpoint: 'categories',
