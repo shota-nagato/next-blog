@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import { Sidebar } from '@/components/navigation/Sidebar'
 import Image from 'next/image'
 import Link from 'next/link'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
+        <GoogleTagManager gtmId={process.env.GTM_ID ?? ''} />
         <header className="sticky top-0 shadow bg-white py-4 mb-8">
           <div className="flex w-full md:px-8 mx-auto max-w-[1400px]">
             <div className="mx-2">
