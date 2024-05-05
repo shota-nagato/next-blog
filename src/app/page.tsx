@@ -62,9 +62,7 @@ export default function Home() {
                   {formatDate(article.updatedAt)}
                 </div>
               </div>
-              <h2 className="text-md md:text-md mt-2 font-bold">
-                {article.title}
-              </h2>
+              <h2 className="mt-2 font-bold">{article.title}</h2>
               <div className="mt-2 flex flex-wrap gap-2">
                 {article.categories.map((category) => (
                   <p

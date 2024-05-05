@@ -27,7 +27,7 @@ export default function CategoryArticleList(props: Props) {
   return (
     <div className="mx-auto grid w-3/4 grid-cols-1 gap-6 md:grid-cols-2">
       {contents.map((article) => (
-        <article className="p4 flex flex-col shadow" key={article.id}>
+        <article className="flex flex-col p-4 shadow" key={article.id}>
           <Link
             className="flex flex-col items-center"
             href={`/article/${article.id}`}

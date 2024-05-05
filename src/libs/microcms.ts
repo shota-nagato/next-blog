@@ -1,5 +1,6 @@
-import { Article, Category } from '@/types/articleType'
 import { MicroCMSQueries, createClient } from 'microcms-js-sdk'
+
+import { Article, Category } from '@/types/articleType'
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN)
   throw new Error('MICROCMS_SERVICE_DOMAIN is required')
