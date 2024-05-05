@@ -1,8 +1,9 @@
-import { getArticles, getCategoryDetail } from '@/libs/microcms'
-import Image from 'next/image'
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { use } from 'react'
+
+import { getArticles, getCategoryDetail } from '@/libs/microcms'
 
 type Props = {
   params: { categoryId: string }
@@ -24,25 +25,25 @@ export default function CategoryArticleList(props: Props) {
     }),
   )
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-3/4 mx-auto">
+    <div className="mx-auto grid w-3/4 grid-cols-1 gap-6 md:grid-cols-2">
       {contents.map((article) => (
-        <article className="flex flex-col shadow p4" key={article.id}>
+        <article className="flex flex-col p-4 shadow" key={article.id}>
           <Link
-            href={`/article/${article.id}`}
             className="flex flex-col items-center"
+            href={`/article/${article.id}`}
           >
             <Image
-              src={article.eyecatch?.url ?? '/no-image.png'}
               alt="アイキャッチ"
-              width={1600}
-              height={1200}
               className="rounded-xl object-cover"
+              height={1200}
+              src={article.eyecatch?.url ?? '/no-image.png'}
+              width={1600}
             />
             <h2 className="text-3xl font-bold">{article.title}</h2>
             <div className="flex flex-wrap gap-2 px-4">
               {article.categories.map((category) => (
                 <p
-                  className="text-xs bg-slate-300 rounded-full px-2"
+                  className="rounded-full bg-slate-300 px-2 text-xs"
                   key={`${article.id}-${category.id}`}
                 >
                   {category.name}
