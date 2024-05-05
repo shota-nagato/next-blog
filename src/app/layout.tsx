@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 import { PickUp } from '@/components/article/PickUp'
 import { Header } from '@/components/navigation/Header'
+import { Sidebar } from '@/components/navigation/Sidebar'
 
 import type { Metadata } from 'next'
 
 import '../styles/globals.css'
-import { Sidebar } from '@/components/navigation/Sidebar'
 
 export const metadata: Metadata = {
   title: 'nagato-blog',

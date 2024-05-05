@@ -1,12 +1,7 @@
 import Image from 'next/image'
-import { use } from 'react'
-
-import Categories from '@/components/Categories'
-
-import { getCategories } from '@/libs/microcms'
 
 export const Sidebar = () => {
-  const { contents } = use(getCategories({ limit: 50 }))
+  // const { contents } = use(getCategories({ limit: 50 }))
 
   return (
     <aside className="mt-[120px] w-full md:mt-[280px] md:w-1/2 md:max-w-[360px]">
@@ -39,21 +34,6 @@ export const Sidebar = () => {
         <div className="rounded-b-[3px] bg-white px-[24px] pb-[40px]">
           あああっ
         </div>
-      </div>
-      <div className="mt-4 rounded-lg bg-white pb-4 shadow">
-        <h2 className="rounded-t-lg bg-[#efefef] px-4 py-2 text-sm font-bold">
-          人気の記事
-        </h2>
-        <ul className="mt-4 flex flex-col gap-2 px-4 text-sm text-gray-700">
-          <li>Rails</li>
-          <li>CSS</li>
-        </ul>
-      </div>
-      <div className="mt-4 rounded-lg bg-white pb-4 shadow">
-        <h2 className="rounded-t-lg bg-[#efefef] px-4 py-2 text-sm font-bold">
-          カテゴリー
-        </h2>
-        <Categories categories={contents} />
       </div>
     </aside>
   )
