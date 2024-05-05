@@ -12,7 +12,7 @@ export default function ArticleCardList(props: Props) {
   return (
     <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2">
       {props.articles.map((article) => (
-        <article key={article.id}>
+        <article className="shadow" key={article.id}>
           <Link href={`/article/${article.id}`}>
             <Image
               alt="アイキャッチ"
