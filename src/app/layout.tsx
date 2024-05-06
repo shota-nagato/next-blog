@@ -23,15 +23,13 @@ export default function RootLayout({
     <html lang="ja">
       <body className="bg-[#F8FAFB]">
         <GoogleTagManager gtmId={process.env.GTM_ID ?? ''} />
-        <div className="absolute z-0 w-full">
-          <Image
-            alt="ファーストビュー画像"
-            className="h-[300px] w-full object-cover"
-            height={300}
-            src="/fv.png"
-            width={1280}
-          />
-        </div>
+        <Image
+          alt="ファーストビュー画像"
+          className="absolute h-[300px] w-full object-cover"
+          height={300}
+          src="/fv.png"
+          width={1280}
+        />
         <Header />
         <div className="relative">
           <PickUp />

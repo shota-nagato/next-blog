@@ -10,5 +10,5 @@ export type Article = {
   title: string
   content: string
   eyecatch?: MicroCMSImage
-  categories: Category[]
+  category: Category
 } & MicroCMSDate

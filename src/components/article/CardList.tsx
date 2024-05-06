@@ -40,9 +40,13 @@ export default function ArticleCardList(props: Props) {
                   {formatDate(article.updatedAt)}
                 </div>
               </div>
-              <div className="mt-[10px] inline-block rounded-[3px] bg-[#E8EBEB] px-[12px] py-[6px]">
-                フロントエンド
-              </div>
+              {article.category ? (
+                <div className="mt-[10px] inline-block rounded-[3px] bg-[#E8EBEB] px-[12px] py-[6px]">
+                  <div>{article.category.name}</div>
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
           </Link>
         </article>
