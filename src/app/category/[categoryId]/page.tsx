@@ -40,7 +40,7 @@ export default function CategoryArticleList(props: Props) {
               width={1600}
             />
             <h2 className="text-3xl font-bold">{article.title}</h2>
-            <div className="flex flex-wrap gap-2 px-4">
+            {/* <div className="flex flex-wrap gap-2 px-4">
               {article.categories.map((category) => (
                 <p
                   className="rounded-full bg-slate-300 px-2 text-xs"
@@ -49,7 +49,7 @@ export default function CategoryArticleList(props: Props) {
                   {category.name}
                 </p>
               ))}
-            </div>
+            </div> */}
           </Link>
         </article>
       ))}

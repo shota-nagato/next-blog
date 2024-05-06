@@ -83,7 +83,7 @@ export default async function Article(props: Props) {
         src={article.eyecatch?.url ?? '/no-image.png'}
         width={1600}
       />
-      <div className="mt-2 flex flex-wrap gap-2">
+      {/* <div className="mt-2 flex flex-wrap gap-2">
         {article.categories.map((category) => (
           <a
             className="rounded-full bg-slate-300 px-2 py-1 text-sm"
@@ -93,7 +93,7 @@ export default async function Article(props: Props) {
             {category.name}
           </a>
         ))}
-      </div>
+      </div> */}
       <div className="article mt-4">
         <ArticleContent content={article.content} />
       </div>
