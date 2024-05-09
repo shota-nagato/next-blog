@@ -1,7 +1,6 @@
 import { GoogleTagManager } from '@next/third-parties/google'
 import Image from 'next/image'
 
-import { PickUp } from '@/components/article/PickUp'
 import { Header } from '@/components/navigation/Header'
 import { Sidebar } from '@/components/navigation/Sidebar'
 
@@ -32,7 +31,6 @@ export default function RootLayout({
         />
         <Header />
         <div className="relative">
-          <PickUp />
           <div className="mx-auto flex max-w-screen-xl flex-col gap-[120px] px-[22.5px] md:flex-row md:gap-[20px] lg:gap-[50px] lg:px-[100px]">
             <main className="">{children}</main>
             <Sidebar />

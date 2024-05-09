@@ -11,7 +11,7 @@ export const Sidebar = () => {
   const { contents } = use(getArticles({ limit: 5 }))
 
   return (
-    <aside className="mt-[120px] w-full md:mt-[280px] md:w-1/2 md:max-w-[360px]">
+    <aside className="w-full min-w-[270px] md:w-1/2 md:max-w-[360px]">
       {/* 検索フォーム */}
       <div className="rounded-lg bg-white p-4 shadow">
         <h2 className="text-sm font-bold">ここに検索フォームが入ります</h2>
@@ -35,7 +35,7 @@ export const Sidebar = () => {
 
         {/* プロフィール文章 */}
         <p className="mt-[20px] text-[14px] text-secondary-black">
-          社会人2年目のWebエンジニア｜1997年生まれRailsとかRailsとかRailsとかRailsとかRailsとか
+          社会人2年目のWebエンジニア｜1998年生まれRailsとかRailsとかRailsとかRailsとかRailsとか
         </p>
         <p className="text-[14px] text-secondary-black">筋トレ｜sup</p>
 
