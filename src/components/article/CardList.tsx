@@ -33,7 +33,7 @@ export default function ArticleCardList(props: Props) {
                   <Image alt="作成日" height={15} src="/clock.svg" width={15} />
                   {formatDate(article.createdAt)}
                 </div>
-                {/* <div className="flex items-center gap-[5px]">
+                <div className="flex items-center gap-[5px]">
                   <Image
                     alt="更新日"
                     height={15}
@@ -41,7 +41,7 @@ export default function ArticleCardList(props: Props) {
                     width={15}
                   />
                   {formatDate(article.updatedAt)}
-                </div> */}
+                </div>
               </div>
               {article.category ? (
                 <div className="mt-[10px] inline-block rounded-[3px] bg-[#E8EBEB] px-[12px] py-[6px] text-[12px]">
