@@ -1,6 +1,6 @@
 import { MicroCMSQueries, createClient } from 'microcms-js-sdk'
 
-import { Article, Category } from '@/types/articleType'
+import { Article, Category, Tag } from '@/types/articleType'
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN)
   throw new Error('MICROCMS_SERVICE_DOMAIN is required')
@@ -70,4 +70,17 @@ export async function getCategoryDetail(
     queries,
   })
   return categoryDetail
+}
+
+export async function getTags(queries?: MicroCMSQueries) {
+  const tags = await microCMSClient.getList<Tag>({
+    customRequestInit: {
+      next: {
+        revalidate: 60,
+      },
+    },
+    endpoint: 'tags',
+    queries,
+  })
+  return tags
 }

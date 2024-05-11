@@ -10,10 +10,9 @@ type Props = {
 
 export default function ArticleCardList(props: Props) {
   return (
-    // <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2">
     <div className="grid grid-cols-1 gap-[15px] sm:grid-cols-2">
       {props.articles.map((article) => (
-        <article className="bg-white shadow" key={article.id}>
+        <article className="rounded-[3px] bg-white shadow" key={article.id}>
           <Link href={`/article/${article.id}`}>
             <Image
               alt="アイキャッチ"
@@ -22,12 +21,10 @@ export default function ArticleCardList(props: Props) {
               src={article.eyecatch?.url ?? '/no-image.png'}
               width={345}
             />
-            <div className="rounded-b-[3px] px-[16px] pb-[24px] pt-[16px]">
-              {/* <h3 className="text-[20px] text-primary-black"> */}
+            <div className="px-[16px] pb-[24px] pt-[16px]">
               <h3 className="text-[16px] text-primary-black">
                 {article.title}
               </h3>
-              {/* <div className="mt-[47px] flex gap-[8px] text-[14px] text-secondary-black"> */}
               <div className="mt-[16px] flex gap-[8px] text-[14px] text-secondary-black">
                 <div className="flex items-center gap-[5px]">
                   <Image alt="作成日" height={15} src="/clock.svg" width={15} />
