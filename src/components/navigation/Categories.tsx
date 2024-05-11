@@ -3,12 +3,12 @@ import { use } from 'react'
 import { getCategories } from '@/libs/microcms'
 
 export const Categories = () => {
-  const { contents } = use(getCategories({ limit: 50 }))
+  const { contents } = use(getCategories({ orders: 'publishedAt' })) // 昇順
   return (
     <div className="pt-[20px]">
       {contents.map((category) => (
         <div
-          className="mb-[12px] border-b border-[#B2B7B7] pb-[12px] text-[16px] text-primary-black"
+          className="mb-[12px] border-b border-[#B2B7B7] pb-[12px] text-primary-black last:border-none last:pb-0"
           key={category.id}
         >
           <a

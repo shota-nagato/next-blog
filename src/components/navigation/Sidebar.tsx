@@ -6,6 +6,7 @@ import { formatDate } from '@/libs/convertdate'
 import { getArticles } from '@/libs/microcms'
 
 import { Categories } from './Categories'
+import { Tags } from './Tags'
 
 export const Sidebar = () => {
   const { contents } = use(getArticles({ limit: 5 }))
@@ -13,9 +14,19 @@ export const Sidebar = () => {
   return (
     <aside className="w-full min-w-[270px] md:w-1/2 md:max-w-[360px]">
       {/* 検索フォーム */}
-      <div className="rounded-lg bg-white p-4 shadow">
-        <h2 className="text-sm font-bold">ここに検索フォームが入ります</h2>
-      </div>
+      <form className="flex">
+        <input
+          className="w-full rounded-l-[3px] bg-white px-[24px] py-[12px]"
+          placeholder="キーワードで探す"
+          type="text"
+        />
+        <button
+          className="rounded-r-[3px] bg-primary-blue px-[20px]"
+          type="submit"
+        >
+          <Image alt="検索" height={15} src="/search.svg" width={15} />
+        </button>
+      </form>
 
       {/* プロフィール */}
       <div className="mt-[60px] rounded-[3px] bg-white px-[24px] pb-[24px] pt-[30px] sm:mt-[30px]">
@@ -62,7 +73,7 @@ export const Sidebar = () => {
           {contents.map((article, index) => (
             <article className="pt-[20px]" key={article.id}>
               <Link
-                className="relative flex items-end gap-[12px]"
+                className="relative flex items-center gap-[12px]"
                 href={`/article/${article.id}`}
               >
                 <Image
@@ -121,8 +132,8 @@ export const Sidebar = () => {
           <Image alt="人気アイコン" height={21} src="/tag.svg" width={20} />
           <div>タグ</div>
         </div>
-        <div className="rounded-b-[3px] bg-white px-[24px] pb-[40px]">
-          あああっ
+        <div className="rounded-b-[3px] bg-white px-[24px] pb-[23px]">
+          <Tags />
         </div>
       </div>
     </aside>
