@@ -12,7 +12,7 @@ export const Sidebar = () => {
   const { contents } = use(getArticles({ limit: 5 }))
 
   return (
-    <aside className="w-full min-w-[270px] md:w-1/2 md:max-w-[360px]">
+    <aside className="w-full min-w-[270px] md:w-1/2 md:max-w-[380px]">
       {/* 検索フォーム */}
       <form className="flex">
         <input
@@ -31,15 +31,13 @@ export const Sidebar = () => {
       {/* プロフィール */}
       <div className="mt-[60px] rounded-[3px] bg-white px-[24px] pb-[24px] pt-[30px] sm:mt-[30px]">
         <div className="flex items-center gap-[24px]">
-          <div className="size-[80]">
-            <Image
-              alt="アバター"
-              className="rounded-full shadow"
-              height={80}
-              src="/avator.png"
-              width={80}
-            />
-          </div>
+          <Image
+            alt="アバター"
+            className="rounded-full shadow"
+            height={80}
+            src="/avator.png"
+            width={80}
+          />
           <div>
             <h3 className="text-[20px] text-primary-black">ShotaNagato</h3>
             <p className="text-[14px] text-secondary-black">Webエンジニア</p>
@@ -48,9 +46,9 @@ export const Sidebar = () => {
 
         {/* プロフィール文章 */}
         <p className="mt-[20px] text-[14px] text-secondary-black">
-          社会人2年目のWebエンジニア｜1998年生まれRailsとかRailsとかRailsとかRailsとかRailsとか
+          社会人2年目のWebエンジニア｜RailsとかNextとか
         </p>
-        <p className="text-[14px] text-secondary-black">筋トレ｜sup</p>
+        <p className="text-[14px] text-secondary-black">筋トレ｜SUP</p>
 
         {/* Links */}
         <div className="mt-[28px] flex items-center gap-[16px]">
@@ -91,12 +89,9 @@ export const Sidebar = () => {
                   {index + 1}
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="text-[16px]">
-                    {/* SPの時は必要ない */}
-                    {article.title.length > 20
-                      ? article.title.substring(0, 20) + '...'
-                      : article.title}
-                  </h3>
+                  <div className="hidden-scrollbar flex overflow-x-auto">
+                    <h3 className="flex-none text-[16px]">{article.title}</h3>
+                  </div>
                   <div className="mt-[7px] flex items-center gap-[5px] text-[14px] text-secondary-black">
                     <Image
                       alt="作成日"
