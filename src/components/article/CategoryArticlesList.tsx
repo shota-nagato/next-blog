@@ -27,7 +27,7 @@ export default function CategoryArticlesList(props: Props) {
             src={article.eyecatch?.url ?? '/no-image.png'}
             width={210}
           />
-          <div className="mt-[10px] w-[210px] text-[16px] text-primary-black">
+          <div className="mt-[10px] max-w-[210px] text-[16px] text-primary-black">
             {article.title}
           </div>
         </Link>

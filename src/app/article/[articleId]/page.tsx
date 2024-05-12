@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import '@/styles/article.css'
+
 import CategoryArticlesList from '@/components/article/CategoryArticlesList'
 
 import { formatDate } from '@/libs/convertdate'
@@ -84,7 +85,7 @@ export default async function Article(props: Props) {
         </div>
         <Image
           alt="アイキャッチ"
-          className="mt-[24px] rounded-[3px] object-cover"
+          className="mt-[24px] w-full rounded-[3px] object-cover"
           height={1200}
           src={article.eyecatch?.url ?? '/no-image.png'}
           width={1600}
