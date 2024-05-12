@@ -83,17 +83,17 @@ export const Sidebar = () => {
                   src={article.eyecatch?.url ?? '/no-image.png'}
                   width={128}
                 />
-                {index + 1 <= 3 ? (
-                  <div className="absolute left-[-10px] top-[-10px] size-[25px] rounded-full bg-primary-blue text-center text-white">
-                    {index + 1}
-                  </div>
-                ) : (
-                  <div className="absolute left-[-10px] top-[-10px] size-[25px] rounded-full bg-[#E8EBEB] text-center text-secondary-black">
-                    {index + 1}
-                  </div>
-                )}
+                <div
+                  className={`absolute left-[-10px] top-[-10px] size-[25px] rounded-full text-center ${index + 1 <= 3 ? 'bg-primary-blue text-white' : 'bg-[#E8EBEB] text-secondary-black'}`}
+                >
+                  {index + 1}
+                </div>
                 <div className="flex flex-col">
-                  <h3 className="text-[16px]">{article.title}</h3>
+                  <h3 className="text-[16px]">
+                    {article.title.length > 20
+                      ? article.title.substring(0, 20) + '...'
+                      : article.title}
+                  </h3>
                   <div className="mt-[7px] flex items-center gap-[5px] text-[14px] text-secondary-black">
                     <Image
                       alt="作成日"
