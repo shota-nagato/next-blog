@@ -9,8 +9,8 @@ import type { Metadata } from 'next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'nagato-blog',
-  description: 'blog',
+  title: 'NagatoTech blog',
+  description: 'webエンジニアの技術ブログです',
 }
 
 export default function RootLayout({

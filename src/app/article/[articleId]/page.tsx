@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import '@/styles/article.css'
@@ -38,63 +39,64 @@ export default async function Article(props: Props) {
   }
 
   return (
-    <article className="container mx-auto rounded-lg bg-white px-2 py-4">
-      <h1 className="text-center text-lg font-bold">{article.title}</h1>
-      <div className="mt-2 flex justify-end gap-2 text-[12px] text-gray-800 md:text-xs">
-        <div className="flex items-center gap-1">
-          <svg
-            className="size-3 md:size-4"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+    <article className="container mx-auto rounded-[3px] bg-white p-[24px] md:p-[30px]">
+      {/* パンくず */}
+      <div className="hidden-scrollbar flex items-center gap-[16px] overflow-x-auto">
+        <Link href="/">
+          <div className="size-[20px]">
+            <Image
+              alt="ホームアイコン"
+              height={20}
+              src="/home.svg"
+              width={20}
             />
-          </svg>
+          </div>
+        </Link>
+
+        <div className="text-secondary-black">{'>'}</div>
+        <div className="flex-none font-[14px] text-primary-blue">
+          {article.category.name}
+        </div>
+        <div className="text-secondary-black">{'>'}</div>
+        <div className="flex-none font-[14px]">{article.title}</div>
+      </div>
+
+      {/* カテゴリ */}
+      <div className="mt-[60px] inline-block rounded-[3px] bg-[#E8EBEB] px-[12px] py-[6px] text-[16px] text-primary-black md:mt-[60px]">
+        {article.category.name}
+      </div>
+      <h1 className="mt-[10px] text-[22px] md:mt-[16px] md:text-[36px]">
+        {article.title}
+      </h1>
+      <div className="mt-[10px] flex gap-[8px] text-[14px] text-secondary-black">
+        <div className="flex items-center gap-[5px]">
+          <Image alt="作成日" height={15} src="/clock.svg" width={15} />
           {formatDate(article.createdAt)}
         </div>
-        <div className="flex items-center gap-1">
-          <svg
-            className="size-3 md:size-4"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+        <div className="flex items-center gap-[5px]">
+          <Image alt="更新日" height={15} src="/refresh.svg" width={15} />
           {formatDate(article.updatedAt)}
         </div>
       </div>
       <Image
         alt="アイキャッチ"
-        className="mt-2 rounded-lg object-cover"
+        className="mt-[24px] rounded-[3px] object-cover"
         height={1200}
         src={article.eyecatch?.url ?? '/no-image.png'}
         width={1600}
       />
-      {/* <div className="mt-2 flex flex-wrap gap-2">
-        {article.categories.map((category) => (
-          <a
-            className="rounded-full bg-slate-300 px-2 py-1 text-sm"
-            href={`/category/${category.id}`}
-            key={`${article.id}-${category.id}`}
+      {/* タグ */}
+      <div className="mt-[16px] flex flex-wrap text-[16px] text-secondary-black">
+        {article.tags?.map((tag) => (
+          <div
+            className="mr-[16px] border-r border-[#B2B7B7] pr-[16px] last:border-none"
+            key={tag.id}
           >
-            {category.name}
-          </a>
+            {`# ${tag.name}`}
+          </div>
         ))}
-      </div> */}
-      <div className="article mt-4">
+      </div>
+      <div className="article mt-[60px] md:mt-[90px]">
         <ArticleContent content={article.content} />
       </div>
     </article>
