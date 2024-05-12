@@ -31,13 +31,15 @@ export const Sidebar = () => {
       {/* プロフィール */}
       <div className="mt-[60px] rounded-[3px] bg-white px-[24px] pb-[24px] pt-[30px] sm:mt-[30px]">
         <div className="flex items-center gap-[24px]">
-          <Image
-            alt="アバター"
-            className="rounded-full shadow"
-            height={80}
-            src="/avator.png"
-            width={80}
-          />
+          <div className="size-[80]">
+            <Image
+              alt="アバター"
+              className="rounded-full shadow"
+              height={80}
+              src="/avator.png"
+              width={80}
+            />
+          </div>
           <div>
             <h3 className="text-[20px] text-primary-black">ShotaNagato</h3>
             <p className="text-[14px] text-secondary-black">Webエンジニア</p>
@@ -90,6 +92,7 @@ export const Sidebar = () => {
                 </div>
                 <div className="flex flex-col">
                   <h3 className="text-[16px]">
+                    {/* SPの時は必要ない */}
                     {article.title.length > 20
                       ? article.title.substring(0, 20) + '...'
                       : article.title}
