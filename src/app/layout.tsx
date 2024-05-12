@@ -40,14 +40,14 @@ export default function RootLayout({
           <main className="w-full md:w-2/3">{children}</main>
           <Sidebar />
         </div> */}
-        <footer className="relative mt-8 bg-[#efefef] py-4 text-center">
-          <div className="flex justify-center gap-4 text-sm">
+        <footer className="relative  mt-[180px] bg-primary-black py-[30px] text-center text-white">
+          <div className="flex justify-center gap-[30px] text-sm">
             <p>お問い合わせ</p>
             <p>プライバシーポリシー</p>
             <p>サイトマップ</p>
           </div>
-          <span className="text-xs">
-            © Copyright 2024 天才クリエイターズ .
+          <span className="mt-[24px] text-xs">
+            © 2024 NagatoTech All rights reserved.
           </span>
         </footer>
       </body>

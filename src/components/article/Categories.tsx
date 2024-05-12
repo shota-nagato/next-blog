@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { use } from 'react'
 
 import { getCategories } from '@/libs/microcms'
@@ -11,7 +12,7 @@ export const Categories = () => {
           className="rounded-[3px] bg-[#E8EBEB] px-[12px] py-[6px] text-primary-black"
           key={category.id}
         >
-          <a href={`/category/${category.id}`}>{category.name}</a>
+          <Link href={`/category/${category.id}`}>{category.name}</Link>
         </div>
       ))}
     </div>

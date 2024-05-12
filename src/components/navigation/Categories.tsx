@@ -1,6 +1,13 @@
 import { use } from 'react'
 
-import { getCategories } from '@/libs/microcms'
+import { getArticles, getCategories } from '@/libs/microcms'
+
+export async function getArticlesCount(categoryId: string) {
+  const { contents } = await getArticles({
+    filters: `category[equals]${categoryId}`,
+  })
+  return contents.length
+}
 
 export const Categories = () => {
   const { contents } = use(getCategories({ orders: 'publishedAt' })) // 昇順
@@ -18,7 +25,9 @@ export const Categories = () => {
             <div className="text-[16px] text-primary-black">
               {category.name}
             </div>
-            <div className="text-[14px] text-secondary-black">{`(0)`}</div>
+            <div className="text-[14px] text-secondary-black">
+              ({getArticlesCount(category.id)})
+            </div>
           </a>
         </div>
       ))}
