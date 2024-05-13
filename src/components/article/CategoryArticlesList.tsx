@@ -13,7 +13,7 @@ export default function CategoryArticlesList(props: Props) {
     getArticles({ filters: `category[equals]${props.categoryId}` }),
   )
   return (
-    <div className="flex gap-[20px] overflow-x-auto">
+    <div className="flex gap-[20px] overflow-x-auto md:grid md:grid-cols-3">
       {contents.map((article) => (
         <Link
           className="flex flex-col"
@@ -22,12 +22,12 @@ export default function CategoryArticlesList(props: Props) {
         >
           <Image
             alt="アイキャッチ"
-            className="min-w-[210px] rounded-[3px] object-cover shadow"
+            className="min-w-[210] rounded-[3px] object-cover shadow md:min-w-0"
             height={157}
             src={article.eyecatch?.url ?? '/no-image.png'}
             width={210}
           />
-          <div className="mt-[10px] max-w-[210px] text-[16px] text-primary-black">
+          <div className="mt-[10px] text-[16px] text-primary-black">
             {article.title}
           </div>
         </Link>
