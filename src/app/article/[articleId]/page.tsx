@@ -187,7 +187,7 @@ export default async function Article(props: Props) {
       <div className="mt-[120px]">
         <div className="text-[22px] text-primary-black">同じカテゴリの記事</div>
         <div className="mt-[24px]">
-          <CategoryArticlesList categoryId={article.category.id} />
+          <CategoryArticlesList article={article} />
         </div>
       </div>
     </div>

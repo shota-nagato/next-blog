@@ -3,14 +3,17 @@ import Link from 'next/link'
 import { use } from 'react'
 
 import { getArticles } from '@/libs/microcms'
+import { Article } from '@/types/articleType'
 
 type Props = {
-  categoryId: string
+  article: Article
 }
 
 export default function CategoryArticlesList(props: Props) {
   const { contents } = use(
-    getArticles({ filters: `category[equals]${props.categoryId}` }),
+    getArticles({
+      filters: `category[equals]${props.article.category.id}[and]id[not_equals]${props.article.id}`,
+    }),
   )
   return (
     <div className="flex gap-[20px] overflow-x-auto md:grid md:grid-cols-3">
