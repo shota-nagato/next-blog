@@ -77,3 +77,31 @@
   margin-bottom: 32px;
   border: solid #c3bdbd 1px;
 }
+
+.article pre {
+  background: #1a2638 !important;
+  border: none !important;
+}
+
+.article pre code {
+  font-size: 14px;
+  font-family:
+    SFMono-Regular,
+    Consolas,
+    Liberation Mono,
+    Menlo,
+    monospace,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+}
+
+.article .code-block-filename {
+  background: #1a2638;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 5% 5% 0 0;
+  position: relative;
+  top: 1px;
+}
