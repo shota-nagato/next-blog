@@ -25,7 +25,7 @@ export default function CategoryArticlesList(props: Props) {
         >
           <Image
             alt="アイキャッチ"
-            className="min-w-[210] rounded-[3px] object-cover shadow md:min-w-0"
+            className="w-full min-w-[210px] rounded-[3px] object-cover shadow md:min-w-0"
             height={157}
             src={article.eyecatch?.url ?? '/no-image.png'}
             width={210}
