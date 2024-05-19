@@ -12,7 +12,7 @@ export const Sidebar = () => {
   const { contents } = use(getArticles({ limit: 5 }))
 
   return (
-    <aside className="w-full min-w-[270px] md:w-1/2 lg:min-w-[360px]">
+    <aside className="mt-[48px] w-full min-w-[270px] md:mt-0 md:w-1/2 lg:min-w-[360px]">
       {/* 検索フォーム */}
       <form className="flex">
         <input
