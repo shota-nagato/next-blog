@@ -1,8 +1,10 @@
 'use client'
-import 'highlight.js/styles/vs2015.css'
-import hljs from 'highlight.js'
+// import 'highlight.js/styles/vs2015.css'
+import 'prismjs/themes/prism-dark.css'
 import parse from 'html-react-parser'
+import Prism from 'prismjs'
 import { useEffect } from 'react'
+require('prismjs/components/prism-ruby')
 
 type Props = {
   content: string
@@ -10,9 +12,10 @@ type Props = {
 
 export default function ArticleContent(props: Props) {
   useEffect(() => {
-    document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightBlock(block as HTMLElement)
-    })
+    Prism.highlightAll()
+    // document.querySelectorAll('pre code').forEach((block) => {
+    //   hljs.highlightBlock(block as HTMLElement)
+    // })
 
     const codeElements = document.querySelectorAll('[data-filename]')
     codeElements.forEach((codeElement) => {
