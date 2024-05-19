@@ -6,7 +6,6 @@ export async function getArticlesCount(tagId: string) {
   const { contents } = await getArticles({
     filters: `tags[contains]${tagId}`,
   })
-  console.log(contents.length)
   return contents.length
 }
 
