@@ -146,7 +146,7 @@ export default async function Article(props: Props) {
               alt="アバター"
               className="rounded-full shadow"
               height={80}
-              src="/avator.png"
+              src="/profile.png"
               width={80}
             />
             <div>
