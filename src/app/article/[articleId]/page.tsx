@@ -43,7 +43,7 @@ export default async function Article(props: Props) {
 
   return (
     <div>
-      <article className="rounded-[3px] bg-white px-[24px] pb-[90px] pt-[30px] md:px-[30px]">
+      <article className="rounded-[3px] bg-white px-[24px] pb-[90px] pt-[30px] md:px-[30px] lg:max-w-[670px]">
         {/* パンくず */}
         <div className="hidden-scrollbar flex items-center gap-[16px] overflow-x-auto">
           <Link href="/">
