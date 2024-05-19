@@ -31,8 +31,8 @@ export default function RootLayout({
         />
         <Header />
         <div className="relative">
-          <div className="mx-auto flex max-w-screen-xl flex-col gap-[120px] px-[22.5px] md:flex-row md:gap-[20px] lg:gap-[50px] lg:px-[100px]">
-            <main className="">{children}</main>
+          <div className="mx-auto max-w-screen-xl gap-[120px] px-[22.5px] md:grid md:grid-cols-8 md:gap-[20px] lg:gap-[50px] lg:px-[100px]">
+            <main className="md:col-span-5">{children}</main>
             <Sidebar />
           </div>
         </div>
