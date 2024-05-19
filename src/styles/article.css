@@ -73,6 +73,12 @@
   margin-bottom: 16px;
 }
 
+.article p code {
+  background-color: #215aa012;
+  border-radius: 3px;
+  padding: 2px 4px;
+}
+
 .article img {
   margin-bottom: 32px;
   border: solid #c3bdbd 1px;
@@ -84,6 +90,7 @@
 }
 
 .article pre code {
+  margin-bottom: 16px;
   font-size: 14px;
   font-family:
     SFMono-Regular,
