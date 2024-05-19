@@ -84,3 +84,20 @@ export async function getTags(queries?: MicroCMSQueries) {
   })
   return tags
 }
+
+export async function getTagDetail(
+  contentId: string,
+  queries?: MicroCMSQueries,
+) {
+  const tagDetail = await microCMSClient.getListDetail<Tag>({
+    customRequestInit: {
+      next: {
+        revalidate: 60,
+      },
+    },
+    endpoint: 'tags',
+    contentId,
+    queries,
+  })
+  return tagDetail
+}
