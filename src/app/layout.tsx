@@ -1,5 +1,6 @@
 import { GoogleTagManager } from '@next/third-parties/google'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Header } from '@/components/navigation/Header'
 import { Sidebar } from '@/components/navigation/Sidebar'
@@ -44,7 +45,9 @@ export default function RootLayout({
         </div> */}
         <footer className="relative  mt-[180px] bg-primary-black py-[30px] text-center text-white">
           <div className="flex justify-center gap-[30px] text-sm">
-            <p>お問い合わせ</p>
+            <Link href="/contact">
+              <p>お問い合わせ</p>
+            </Link>
             <p>プライバシーポリシー</p>
             <p>サイトマップ</p>
           </div>
