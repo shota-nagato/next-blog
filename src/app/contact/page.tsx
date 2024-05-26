@@ -119,8 +119,9 @@ export default function Contact() {
               {error}
             </div>
           ))}
-        <SubmitButton />
-        <div className="mt-[28px]"></div>
+        <div className="mt-[28px]">
+          <SubmitButton />
+        </div>
       </form>
     </div>
   )
