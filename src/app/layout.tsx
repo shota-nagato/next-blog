@@ -48,7 +48,9 @@ export default function RootLayout({
             <Link href="/contact">
               <p>お問い合わせ</p>
             </Link>
-            <p>プライバシーポリシー</p>
+            <Link href="/privacy-policy">
+              <p>プライバシーポリシー</p>
+            </Link>
             <p>サイトマップ</p>
           </div>
           <span className="mt-[24px] text-xs">
