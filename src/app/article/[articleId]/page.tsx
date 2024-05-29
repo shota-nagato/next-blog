@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation'
 import '@/styles/article.css'
 
 import CategoryArticlesList from '@/components/article/CategoryArticlesList'
-import { CopyButton } from '@/components/article/CopyButton'
 
 import { formatDate } from '@/libs/convertdate'
 import { getArticles, getArticleDetail } from '@/libs/microcms'
@@ -145,7 +144,7 @@ export default async function Article(props: Props) {
                 width={30}
               />
             </Link>
-            <CopyButton url={`https://nagato-tech.com/article/${article.id}`} />
+            {/* <CopyButton url={`https://nagato-tech.com/article/${article.id}`} /> */}
           </div>
         </div>
 
