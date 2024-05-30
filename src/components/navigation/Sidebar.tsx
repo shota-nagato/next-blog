@@ -112,7 +112,7 @@ export const Sidebar = () => {
       <div className="mt-[60px] sm:mt-[30px]">
         <div className="flex items-center gap-[8px] rounded-t-[3px] bg-primary-blue px-[24px] py-[12px] text-[20px] text-white">
           <Image
-            alt="人気アイコン"
+            alt="カテゴリアイコン"
             height={21}
             src="/category.svg"
             width={20}
@@ -127,7 +127,7 @@ export const Sidebar = () => {
       {/* タグ */}
       <div className="mt-[60px] sm:mt-[30px]">
         <div className="flex items-center gap-[8px] rounded-t-[3px] bg-primary-blue px-[24px] py-[12px] text-[20px] text-white">
-          <Image alt="人気アイコン" height={21} src="/tag.svg" width={20} />
+          <Image alt="タグアイコン" height={21} src="/tag.svg" width={20} />
           <div>タグ</div>
         </div>
         <div className="rounded-b-[3px] bg-white px-[24px] pb-[23px]">
