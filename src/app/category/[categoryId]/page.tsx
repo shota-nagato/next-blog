@@ -20,13 +20,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   }
 }
 
-export async function getCategoryName(props: Props): Promise<string> {
-  const id = props.params.categoryId
-  const category = await getCategoryDetail(id)
-  return category.name
-}
-
 export default function CategoryArticleList(props: Props) {
+  const getCategoryName = async (props: Props): Promise<string> => {
+    const id = props.params.categoryId
+    const category = await getCategoryDetail(id)
+    return category.name
+  }
+
   const { contents } = use(
     getArticles({
       filters: `category[equals]${props.params.categoryId}`,
@@ -59,10 +59,10 @@ export default function CategoryArticleList(props: Props) {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                   d="M9 0.5C9.24318 0.5 9.46853 0.634036 9.59365 0.853094L17.9013 15.3985C18.0297 15.6232 18.033 15.903 17.9101 16.1311C17.7872 16.3591 17.5571 16.5 17.3077 16.5H0.692308C0.442889 16.5 0.21275 16.3591 0.0898617 16.1311C-0.0330268 15.903 -0.0296663 15.6232 0.0986588 15.3985L8.40635 0.853094C8.53147 0.634036 8.75682 0.5 9 0.5ZM1.91506 15.0455H16.0849L9 2.64084L1.91506 15.0455Z"
                   fill="#B2B7B7"
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                 />
               </svg>
               <div className="text-[14px] text-[#B2B7B7]">カテゴリ</div>
