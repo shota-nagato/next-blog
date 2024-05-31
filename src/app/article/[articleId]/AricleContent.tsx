@@ -5,6 +5,7 @@ import parse from 'html-react-parser'
 import Prism from 'prismjs'
 import { useEffect } from 'react'
 require('prismjs/components/prism-ruby')
+require('prismjs/components/prism-typescript')
 
 type Props = {
   content: string
