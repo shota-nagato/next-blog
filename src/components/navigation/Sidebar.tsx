@@ -46,7 +46,7 @@ export const Sidebar = () => {
 
         {/* プロフィール文章 */}
         <p className="mt-[20px] text-[14px] text-secondary-black">
-          社会人2年目のWebエンジニア｜RailsとかNextとか
+          社会人1年目のWebエンジニア｜RailsとかNextとか
         </p>
         <p className="text-[14px] text-secondary-black">筋トレ｜SUP</p>
 
