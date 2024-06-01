@@ -87,6 +87,7 @@
 .article pre {
   background: #1a2638 !important;
   border: none !important;
+  margin-bottom: 16px !important;
 }
 
 .article pre code {
