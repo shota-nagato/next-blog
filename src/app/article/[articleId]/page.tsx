@@ -6,9 +6,11 @@ import { notFound } from 'next/navigation'
 import '@/styles/article.css'
 
 import CategoryArticlesList from '@/components/article/CategoryArticlesList'
+import TableOfContents from '@/components/article/TableOfContents'
 
 import { formatDate } from '@/libs/convertdate'
 import { getArticles, getArticleDetail } from '@/libs/microcms'
+import { renderToc } from '@/libs/utils'
 
 import ArticleContent from './AricleContent'
 
@@ -37,6 +39,7 @@ export async function generateStaticParams() {
 export default async function Article(props: Props) {
   const article = await getArticleDetail(props.params.articleId)
   const shareText = article.title + '-NagatTech blog'
+  const toc = renderToc(article.content)
 
   if (!article) {
     notFound()
@@ -104,6 +107,11 @@ export default async function Article(props: Props) {
               {`# ${tag.name}`}
             </div>
           ))}
+        </div>
+
+        {/* 目次 */}
+        <div className="mt-[40px]">
+          <TableOfContents toc={toc} />
         </div>
 
         {/* 記事本文 */}
