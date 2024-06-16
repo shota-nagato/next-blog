@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^14.2.3",
+    "@types/cheerio": "^0.22.35",
     "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.10",
     "highlight.js": "^11.9.0",
