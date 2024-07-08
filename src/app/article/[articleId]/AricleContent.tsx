@@ -4,8 +4,10 @@ import 'prismjs/themes/prism-dark.css'
 import parse from 'html-react-parser'
 import Prism from 'prismjs'
 import { useEffect } from 'react'
-require('prismjs/components/prism-ruby')
-require('prismjs/components/prism-typescript')
+import 'prismjs/components/prism-ruby'
+import 'prismjs/components/prism-typescript'
+import 'prismjs/components/prism-yaml'
+import 'prismjs/components/prism-docker'
 
 type Props = {
   content: string
