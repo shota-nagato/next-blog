@@ -2,6 +2,7 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import GoogleAdsense from '@/components/GoogleAdsense'
 import { Header } from '@/components/navigation/Header'
 import { Sidebar } from '@/components/navigation/Sidebar'
 
@@ -58,6 +59,7 @@ export default function RootLayout({
           </span>
         </footer>
       </body>
+      <GoogleAdsense pId="7212472068496642" />
     </html>
   )
 }
