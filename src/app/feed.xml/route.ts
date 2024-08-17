@@ -21,13 +21,29 @@ export async function GET() {
   const feed = new RSS(feedOptions)
 
   contents.map((article) => {
-    feed.item({
+    const itemOptions: {
+      title: string
+      description: string
+      url: string
+      guid: string
+      date: string
+      enclosure?: { url: string }
+    } = {
       title: article.title,
-      description: article.title,
+      description:
+        article.content.replace(/<\/?[^>]+(>|$)/g, '').substring(0, 120) +
+        '...',
       url: `${siteUrl}/article/${article.id}`,
       guid: article.id,
       date: article.createdAt,
-    })
+    }
+    if (article.eyecatch) {
+      itemOptions['enclosure'] = {
+        url: article.eyecatch.url,
+      }
+    }
+
+    feed.item(itemOptions)
   })
 
   return new Response(feed.xml({ indent: true }), {
