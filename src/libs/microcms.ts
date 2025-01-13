@@ -30,11 +30,11 @@ export async function getArticleDetail(
   queries?: MicroCMSQueries,
 ) {
   const articleDetail = await microCMSClient.getListDetail<Article>({
-    customRequestInit: {
-      next: {
-        revalidate: 0,
-      },
-    },
+    // customRequestInit: {
+    //   next: {
+    //     revalidate: 0,
+    //   },
+    // },
     endpoint: 'articles',
     contentId,
     queries,
