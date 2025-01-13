@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import { use } from 'react'
 
 import '@/styles/article.css'
 
@@ -36,8 +37,8 @@ export async function generateStaticParams() {
   return paths
 }
 
-export default async function Article(props: Props) {
-  const article = await getArticleDetail(props.params.articleId)
+export default function Article(props: Props) {
+  const article = use(getArticleDetail(props.params.articleId))
   const shareText = article.title + '-NagatTech blog'
   const toc = renderToc(article.content)
 
