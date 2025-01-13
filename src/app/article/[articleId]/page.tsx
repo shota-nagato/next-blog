@@ -174,7 +174,7 @@ export default async function Article(props: Props) {
                 </p>
               </div>
               <p className="mt-[16px] text-primary-black">
-                社会人1年目のWebエンジニア｜RailsとかNextとか
+                社会人2年目のWebエンジニア｜RailsとかNextとか
               </p>
             </div>
           </div>
