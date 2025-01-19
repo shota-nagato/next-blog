@@ -23,6 +23,14 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const article = await getArticleDetail(id)
   return {
     title: article.title,
+    description: article.content.slice(0, 100) + '...',
+    openGraph: {
+      images: [
+        {
+          url: article.eyecatch?.url ?? '/no-image.png',
+        },
+      ],
+    },
   }
 }
 
