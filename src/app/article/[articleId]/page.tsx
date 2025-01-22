@@ -88,7 +88,7 @@ export default async function Article(props: Props) {
         <div className="mt-[10px] flex gap-[8px] text-[14px] text-secondary-black">
           <div className="flex items-center gap-[5px]">
             <Image alt="作成日" height={15} src="/clock.svg" width={15} />
-            {formatDate(article.createdAt)}
+            {formatDate(article.publishedAt ?? article.createdAt)}
           </div>
           <div className="flex items-center gap-[5px]">
             <Image alt="更新日" height={15} src="/refresh.svg" width={15} />
