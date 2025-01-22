@@ -35,7 +35,7 @@ export async function GET() {
         '...',
       url: `${siteUrl}/article/${article.id}`,
       guid: article.id,
-      date: article.createdAt,
+      date: article.publishedAt ?? article.createdAt,
     }
     if (article.eyecatch) {
       itemOptions['enclosure'] = {

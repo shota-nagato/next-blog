@@ -98,7 +98,7 @@ export const Sidebar = () => {
                       src="/clock.svg"
                       width={15}
                     />
-                    {formatDate(article.createdAt)}
+                    {formatDate(article.publishedAt ?? article.createdAt)}
                   </div>
                 </div>
               </Link>

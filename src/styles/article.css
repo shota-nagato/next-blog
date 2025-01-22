@@ -39,6 +39,10 @@
   height: auto;
 }
 
+.article table p {
+  margin-top: 16px;
+}
+
 .article table tbody {
   border: 1 solid #e5e7db;
 }
