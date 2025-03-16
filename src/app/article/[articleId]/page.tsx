@@ -182,7 +182,10 @@ export default async function Article(props: Props) {
                 </p>
               </div>
               <p className="mt-[16px] text-primary-black">
-                社会人2年目のWebエンジニア｜RailsとかNextとか
+                <Link href="https://hab-co.jp" target="_blank">
+                  株式会社HAB&Co.
+                </Link>
+                ｜RailsとかNext.jsとか
               </p>
             </div>
           </div>

@@ -46,7 +46,10 @@ export const Sidebar = () => {
 
         {/* プロフィール文章 */}
         <p className="mt-[20px] text-[14px] text-secondary-black">
-          社会人2年目のWebエンジニア｜RailsとかNextとか
+          <Link href="https://hab-co.jp" target="_blank">
+            株式会社HAB&Co.
+          </Link>
+          ｜RailsとかNext.jsとか
         </p>
 
         {/* Links */}
